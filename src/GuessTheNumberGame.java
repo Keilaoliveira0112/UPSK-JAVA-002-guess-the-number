@@ -1,10 +1,10 @@
 import java.util.Random;
 
 public class GuessTheNumberGame {
-    private static Random random = new Random();
-    private static int targetNumber;
+    public static int targetNumber;
 
     public static void main(String[] args) {
+        Random random = new Random();
         targetNumber = random.nextInt(100) + 1;
         Player humanPlayer = new HumanPlayer("Keila");
         Player computerPlayer = new ComputerPlayer("Computador");
@@ -29,6 +29,8 @@ public class GuessTheNumberGame {
         } else {
             player.setGuessed(true);
         }
+
+
     }
 
     public static void displayGameResult(Player winner) {
